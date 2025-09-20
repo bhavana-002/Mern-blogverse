@@ -1,4 +1,5 @@
-const Home = () => {
+ import NavBar from "./NavBar.jsx"
+ const Home = () => {
     const posts = [
         {
             id: 1,
@@ -75,13 +76,14 @@ const Home = () => {
     ];
 
     return (
-        <div className="p-5 flex flex-col bg-gray-50 min-h-screen">
-            <h1 className="text-4xl font-bold text-center mb-4">
+        <div className="p-5  w-full flex flex-col bg-gray-50 min-h-screen">
+            <NavBar/>
+            <h1 className="text-4xl font-bold text-center mt-5">
                 Welcome to BlogVerse
             </h1>
             <p className=" text-xl mt-6 text-gray-500 text-center">Discover amazing stories, insights, and ideas from our community of <br></br>writers.<span className="hover:underline text-blue-600 cursor-pointer">Sign in </span>to create your own posts and save your favorites.</p>
 
-            <div className="grid md:grid-cols-3 p-20 border border-black gap-6 mb-10 ">
+            <div className="grid md:grid-cols-3 p-20  border-black gap-6 mb-10 ">
                 {posts.map((post) => (
                     <div
                         key={post.id}
@@ -91,11 +93,15 @@ const Home = () => {
                             <img
                                 src={post.image}
                                 alt={post.title}
-                                className="w-full h-48 transform hover:scale-105 object-cover"
+                                className="w-full h-48 object-cover transform transition duration-300 hover:scale-105"
                             />
 
+                            <h2 className="mt-3 font-bold text-lg text-gray-900 cursor-pointer transition-colors duration-200 hover:text-blue-500">
+                                {post.title}
+                            </h2>
+
                             <div className="p-5 ">
-                                <span className="inline-block px-3 py-1 text-sm  absolute top-7 left-6 font-semibold text-white bg-blue-600 rounded-full mb-3">
+                                <span className="px-3 py-1 text-sm  absolute top-7 left-6 font-semibold text-white bg-blue-600 rounded-full mb-3">
                                     {post.category}
                                 </span>
                             </div>
@@ -119,23 +125,23 @@ const Home = () => {
                             </div>
 
                             <div className="relative p-5  bg-white">
-                                
+
                                 <h2 className="font-bold text-lg text-gray-900 mb-2">
                                     {post.title}
                                 </h2>
 
-                            
+
                                 <p className="text-gray-600 text-md mb-12">{post.description}</p>
                                 <div className="border-1 mb-10 border-gray-100"></div>
-                                
+
                                 <a href="#"
                                     className="absolute right-5 bottom-5 text-blue-600 font-semibold hover:underline text-sm">
                                     Read More
                                 </a>
                                 <div className="relative">
                                     <p className="text-gray-600 text-sm absolute left-5 bottom-0">🕛{post.readTime}</p>
-                                    </div>
-                                
+                                </div>
+
                             </div>
 
                         </div>

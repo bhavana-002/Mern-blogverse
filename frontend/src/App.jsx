@@ -2,23 +2,24 @@
 //import ProductCard from "./ProductCard.jsx";
  import NavBar from "./NavBar.jsx"
  import Home from "./Home.jsx"
- //import SignUp from "./SignUp.jsx"
- //import SignIn from "./SignIn.jsx"
+ import {Routes,Route} from 'react-router-dom'
+ import SignUp from "./SignUp.jsx"
+ import SignIn from "./SignIn.jsx"
 function App() {
  
 
   return (
-    /*<div className="flex justify-center items-center min-h-screen gap-10">
-      <ProductCard />
-       <ProductCard />
-        <ProductCard />
-    </div>*/
-    <div>
-      <NavBar />
-     <Home />
+    
+    <Routes>
+      <Route path="/signup" element={<SignUp/>}/>
+      <Route path="/signin" element={<SignIn/>}/>
+      <Route path="/home" element={<Home/>}/>
+      <Route path="/navbar" element={<NavBar/>}/>
+    </Routes>
+      
       
 
-    </div>
+    
   )
 }
 

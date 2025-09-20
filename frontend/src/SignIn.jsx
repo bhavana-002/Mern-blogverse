@@ -1,8 +1,23 @@
 
-
+import NavBar from "./NavBar.jsx"
+import {Link} from "react-router-dom"
+import { EyeOff } from 'lucide-react'
+import { Eye } from 'lucide-react';
 const SignIn = () => {
+    
+     const [showPassword, setShowPassword] = useState(false);
+        const [showconfirmPassword, setShowconfirmPassword] = useState(false);
+        const handlePassword=()=>{
+            setShowPassword((Previouspassword)=>!Previouspassword)
+    
+        }
+        const handleconfirmPassword=()=>{
+            setShowconfirmPassword((Previouspassword)=>!Previouspassword)
+    
+        }
     return (
-        <div className="flex items-center justify-center flex-col min-h-screen bg-blue-50 gap-5">
+        <div className="flex items-center justify-center flex-col min-h-screen w-full gap-30 bg-blue-50">
+            <NavBar/>
 
             <form className="flex flex-col border-1 border-gray-200 w-1/3 p-2 py-5 items-center gap-5 rounded-3xl shadow-2xl bg-white">
                 <div className="w-[90%] flex flex-col gap-5">
@@ -10,13 +25,17 @@ const SignIn = () => {
 
                     <p className="text-l text-gray-400 text-center font-semibold">Access your account</p>
                     <p className="text-md text-gray-700 font-semibold">Email Address</p>
-                    <input className="border-1 border-gray-300 w-full px-2 py-2 rounded-full focus:outline-none focus:border-blue-500" type="text" placeholder="✉️sample@gmail.com" />
+                    <input className="border-1 border-gray-300 w-full px-2 py-2 rounded-full focus:outline-none focus:border-blue-500" type="text" 
+                    
+                     placeholder="✉️sample@gmail.com" />
 
                 </div>
-                <div className="w-[90%] flex flex-col gap-5">
+                <div className="w-[90%] relative flex flex-col gap-5">
                     <p className="text-md text-gray-700 font-semibold">Password</p>
-                    <input className="border-1 relative  border-gray-300 w-full px-2 py-2 rounded-full focus:outline-none focus:border-blue-500" type="password" placeholder="🔒sample123"/>
-                    <span classNmae="absolute-right-4 bottom-5">👁️</span>
+                    <input className="border-1  border-gray-300 w-full px-2 py-2 rounded-full focus:outline-none focus:border-blue-500" type={showPassword?"text":"password"} 
+                    name="password"
+                    placeholder="🔒sample123"/>
+                    <p onClick={handlePassword}>{showPassword ?<Eye className="absolute right-4 top-2 stroke-gray-400" />:<EyeOff className="absolute right-4 top-2 stroke-gray-400"/>}</p>
 
                 </div>
                 <div className="flex gap-2  w-[90%] py-2  items-center px-4">
@@ -29,14 +48,14 @@ const SignIn = () => {
                     </span>
                 </div>
 
-                <button className="w-[90%] bg-blue-500 rounded-full py-4 cursor-pointer">
+                <Link to="/home" className="w-[90%] items-center justify-center bg-blue-500 rounded-full py-4 cursor-pointer">
                     ⬅️Sign In
-                </button>
+                </Link>
                 <div className="border-gray-100 border-1 w-[90%] mt-4"></div>
                 <p className="font-semibold text-gray-400">Didn't have an Account?
-                    <button className="text-blue-500 hover:underline cursor-pointer">
+                    <Link to="/signup" className="text-blue-500 hover:underline cursor-pointer">
                         Create One here
-                    </button>
+                    </Link>
                 </p>
 
 
