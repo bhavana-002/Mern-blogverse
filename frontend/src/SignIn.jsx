@@ -46,7 +46,7 @@ const SignIn = () => {
                     </span>
                 </div>
 
-                <Link to="/home" className="w-[90%] items-center justify-center bg-blue-500 rounded-full py-4 cursor-pointer">
+                <Link to="/" className="w-[90%] items-center justify-center bg-blue-500 rounded-full py-4 cursor-pointer">
                                         ⬅️Sign In
                 </Link>
                 <div className="border-gray-100 border-1 w-[90%] mt-4"></div>

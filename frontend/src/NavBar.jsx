@@ -3,7 +3,7 @@ const NavBar = () => {
     return (
         <div className="flex justify-around h-16  sm:w-[90%] lg:w-[90%] items-center border-1 w-full  border-gray-200 bg-white">
             <h1 className="text-xl font-bold">BlogVerse</h1>
-            <Link to="/home" className=" hover:bg-gray-200  cursor-pointer">🏡Home</Link>
+            <Link to="/" className=" hover:bg-gray-200  cursor-pointer">🏡Home</Link>
             <div className="flex gap-5" >
                 <button className="p-2 rounded-lg hover:bg-gray-300  cursor-pointer ">🌙</button>
 
