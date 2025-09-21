@@ -3,23 +3,21 @@ import NavBar from "./NavBar.jsx"
 import {Link} from "react-router-dom"
 import { EyeOff } from 'lucide-react'
 import { Eye } from 'lucide-react';
+import { useState } from 'react';
 const SignIn = () => {
     
      const [showPassword, setShowPassword] = useState(false);
-        const [showconfirmPassword, setShowconfirmPassword] = useState(false);
+        
         const handlePassword=()=>{
             setShowPassword((Previouspassword)=>!Previouspassword)
     
         }
-        const handleconfirmPassword=()=>{
-            setShowconfirmPassword((Previouspassword)=>!Previouspassword)
-    
-        }
+       
     return (
         <div className="flex items-center justify-center flex-col min-h-screen w-full gap-30 bg-blue-50">
             <NavBar/>
 
-            <form className="flex flex-col border-1 border-gray-200 w-1/3 p-2 py-5 items-center gap-5 rounded-3xl shadow-2xl bg-white">
+            <form className="flex flex-col border-1 border-gray-200  lg:w-1/3  sm:w-[50%] p-2 py-5 items-center gap-5 rounded-3xl shadow-2xl bg-white">
                 <div className="w-[90%] flex flex-col gap-5">
                     <h1 className="text-2xl text-black font-bold text-center">Sign In</h1>
 
@@ -49,7 +47,7 @@ const SignIn = () => {
                 </div>
 
                 <Link to="/home" className="w-[90%] items-center justify-center bg-blue-500 rounded-full py-4 cursor-pointer">
-                    ⬅️Sign In
+                                        ⬅️Sign In
                 </Link>
                 <div className="border-gray-100 border-1 w-[90%] mt-4"></div>
                 <p className="font-semibold text-gray-400">Didn't have an Account?

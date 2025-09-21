@@ -76,7 +76,7 @@
     ];
 
     return (
-        <div className="p-5  w-full flex flex-col bg-gray-50 min-h-screen">
+        <div className="p-5  w-full flex flex-col lg:w-[90%] sm:w-[90%] bg-gray-50 min-h-screen">
             <NavBar/>
             <h1 className="text-4xl font-bold text-center mt-5">
                 Welcome to BlogVerse
@@ -96,9 +96,7 @@
                                 className="w-full h-48 object-cover transform transition duration-300 hover:scale-105"
                             />
 
-                            <h2 className="mt-3 font-bold text-lg text-gray-900 cursor-pointer transition-colors duration-200 hover:text-blue-500">
-                                {post.title}
-                            </h2>
+                    
 
                             <div className="p-5 ">
                                 <span className="px-3 py-1 text-sm  absolute top-7 left-6 font-semibold text-white bg-blue-600 rounded-full mb-3">

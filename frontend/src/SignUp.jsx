@@ -102,7 +102,7 @@ const SignUp = () => {
             <NavBar />
             <h1 className="text-2xl text-blue-600 font-bold">Join BlogVerse</h1>
             <p className="text-l text-gray-400 text-center font-semibold">Create your account and <br></br>start your Blogging journey today</p>
-            <form onSubmit={handleSubmit} className="flex flex-col border-1 border-gray-200 w-1/3 p-2 py-5 items-center gap-5 rounded-4xl shadow-xl">
+            <form onSubmit={handleSubmit} className="flex flex-col border-1 border-gray-200 sm:w-[50%] lg:w-1/3 p-2 py-5 items-center gap-5 rounded-4xl shadow-xl">
                 <div className="w-[90%] flex flex-col gap-5">
                     <p className="text-md text-gray-700 font-semibold">Full Name</p>
                     <div className="relative">
@@ -162,7 +162,7 @@ const SignUp = () => {
                 </button>
                 <div className="border-gray-100 border-1 w-[90%] mt-4"></div>
                 <p className="font-semibold text-gray-400">Already have an Account? <Link to="/signin" className=" text-blue-500">Sign In here</Link></p>
-                <button className="text-gray-400 font-semibold hover:bg-blue-500 cursor-pointer py-3 px-3 w-[90%] rounded-full">Back to Home</button>
+                <button className="text-gray-400 font-semibold hover:bg-blue-500 cursor-pointer py-3 px-3 w-[90%] rounded-full"><Link to="/home" className="text-blue-500">Back to Home</Link></button>
 
             </form>
 
